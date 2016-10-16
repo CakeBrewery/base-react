@@ -6,7 +6,6 @@ module.exports = {
    entry: {
       javascript: "./app/index.js",
       html: "./app/index.html"
-
    },
    output: {
       path: path.resolve(__dirname, "build"),
@@ -33,5 +32,4 @@ module.exports = {
          },
       ]
    },
-
 }
