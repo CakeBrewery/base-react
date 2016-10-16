@@ -1,5 +1,7 @@
 # base-react
-My vision of a bare-bones React dev environment with Webpack. Just the boiler-plate. :)
+My vision of a bare-bones React dev environment with Webpack. Just the boiler-plate. :) 
+
+Includes support for ES2015, JSX, and CSS modules.
 
 ## Requirements
 - Have Node version 4+ and NPM version 3+ installed.  
