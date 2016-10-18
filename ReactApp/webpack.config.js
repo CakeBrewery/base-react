@@ -2,16 +2,13 @@ var path = require('path');
 
 
 module.exports = {
-
-   entry: {
-      javascript: "./app/index.js",
-      html: "./app/index.html"
-   },
+   entry: './app/index', 
    output: {
       path: path.resolve(__dirname, "build"),
       filename: "bundle.js"
    },
    devServer: {
+			contentBase: './app',
       hot: true
    },
 
