@@ -8,7 +8,7 @@ module.exports = {
       filename: "bundle.js"
    },
    devServer: {
-			contentBase: './app',
+      contentBase: './app',
       hot: true
    },
 
