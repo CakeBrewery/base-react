@@ -11,6 +11,9 @@ Includes support for ES2015, JSX, and CSS modules.
 2. `npm install` to install all required dependencies. 
 3. `npm start` to serve the development environment. 
 
+## Production
+`npm run build` to create a production build. 
+
 The entry files are `index.html` and `index.js` in the `app` folder. 
 
 
