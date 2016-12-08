@@ -10,7 +10,7 @@ var getDebug = function () {
 
 var getSourcemap = function () {
     if (process.env.NODE_ENV === 'production') {
-        return '#cheap-source-map';
+        return '#cheap-module-source-map';
     }
 
     return '#eval-source-map';
@@ -45,6 +45,20 @@ var getPlugins = function() {
 };
 
 
+var getDevServerOptions = function() {
+    if (process.env.NODE_ENV === 'production') {
+        return {};
+    }
+
+    // For dev environment
+    return {
+        contentBase: './app',
+        hot: true,
+        historyApiFallback: true
+    };
+};
+
+
 module.exports = {
     entry: {
         app: './app/index',
@@ -53,11 +67,7 @@ module.exports = {
         path: path.resolve(__dirname, "build"),
         filename: "[name].js"
     },
-    devServer: {
-        contentBase: './app',
-        hot: true,
-        historyApiFallback: true
-    },
+    devServer: getDevServerOptions(),
     debug: getDebug(),
     devtool: getSourcemap(),
     module: {
