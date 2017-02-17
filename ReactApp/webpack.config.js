@@ -27,7 +27,9 @@ var getPlugins = function() {
             }
         }));
         plugins.push(new webpack.optimize.DedupePlugin());
-        plugins.push(new webpack.optimize.UglifyJsPlugin());
+        plugins.push(new webpack.optimize.UglifyJsPlugin({
+          sourceMap: true,
+        }));
         plugins.push(new webpack.optimize.AggressiveMergingPlugin());
 
         /*
